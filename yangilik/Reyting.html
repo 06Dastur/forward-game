@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        #myTable th,
+        #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header,
+        #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .footer {
+            width: 100%;
+            bottom: 5px;
+            height: 40px;
+            margin: 0px 0px;
+        }
+
+        .footer button {
+            width: 100%;
+            height: 100%;
+            background: rgb(250, 246, 4);
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../index.html">
+        <div class="homeda">
+            <button type="submit" style="width: 100%; height: 40px; background-color: green;
+         border-radius: 20px; color: white; margin-bottom: 10px;">Asosiy sahifa</button>
+        </div>
+    </a>
+
+    <h2 style="text-align: center;">Lobby g`oliblari jadvali</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ishtirokchi nomini yozing..."
+        title="Type in a name">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Lobby ishtirokchilari</th>
+            <th style="width:40%;">Yutuqlar</th>
+        </tr>
+        <tr>
+            <td>7M*FORWARD</td>
+            <td>ROYALE PASS</td>
+        </tr>
+        <tr>
+            <td>FB| FORWARD</td>
+            <td>ROYALE PASS</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi2</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi3</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi4</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi5</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi6</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi7</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi8</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi9</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi10</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi11</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi12</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi13</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi14</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+        <tr>
+            <td>Qatnashuvchi15</td>
+            <td>Yutuqlar yoq</td>
+        </tr>
+    </table>
+    <hr>
+    <a href="../lobby.html">
+        <div class="footer">
+            <button type="submit">Lobbyda ishtirok etish</button>
+        </div>
+    </a>
+
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
